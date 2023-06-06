@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/styles.css">
   
   <title>Frontend Mentor | Intro component with sign up form</title>
 
@@ -23,28 +27,29 @@
       </p>
     </section>
 
+    <section class="free-trial-sign">
+      <p>
+        <span>Try it free 7 days</span> then $20/mo. thereafter
+      </p>
+    </section>
+    
     <section class="form-container">
-      <div class="free-trial-sign">
-        Try it free 7 days then $20/mo. thereafter
-      </div>
-
-      <form action="/" class="form">
-        <div>
+      <form action="/">
+        <div class="input-fields">
           <input type="text" id="first-name" class="input input-first-name" placeholder="First Name">
           <input type="text" id="last-name" class="input input-last-name" placeholder="Last Name">
           <input type="email" id="email" class="input input-email" placeholder="Email Address">
           <input type="password" id="password" class="input input-password" placeholder="Password">
         </div>
 
-        <input type="submit" value="CLAIM YOUR FREE TRIAL" class="create-button">
+        <input type="submit" value="CLAIM YOUR FREE TRIAL" class="submit-button">
       </form>
-    </section>
-
-    <footer>
+      <footer>
       <p class="footer">
         By clicking the button, you are agreeing to our <a href="/">Terms and Services</a>
       </p>
     </footer>
+    </section>
   </main>
   
   <footer>

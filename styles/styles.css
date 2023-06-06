@@ -1,0 +1,109 @@
+:root {
+    --mainBgColor: hsl(0, 100%, 74%);
+    --createButtonColor: hsl(154, 59%, 51%);
+    --freeTrialSignColor: hsl(248, 32%, 49%);
+    --inputLettersColor: hsl(249, 10%, 26%);
+    --inputFieldsBorderColor: rgb(185, 182, 211, 0.4);
+    --footerLettersColor: hsl(246, 25%, 77%);
+    --footerLinksColor: hsl(0, 100%, 74%);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url(../images/bg-intro-mobile.png) no-repeat;
+    background-color: var(--mainBgColor);
+
+}
+.title {
+    display: flex;
+    flex-direction: column;
+    padding: 3.125rem 1.875rem 2.9375rem 1.875rem;
+    color: white;
+}
+.title h1 {
+    text-align: center;
+    font-weight: 700;
+}
+.title #description {
+    text-align: center;
+    font-weight: 400;
+}
+
+/* ------------------------------------------------------ */
+
+.free-trial-sign {
+    display: grid;
+    justify-content: center;
+    align-self: center;
+    margin: 0 1.875rem 1.375rem 1.875rem;
+    border-radius: 0.7rem;
+    background-color: var(--freeTrialSignColor);
+}
+.free-trial-sign p span {
+    font-weight: 700;
+}
+.free-trial-sign p {
+    text-align: center;
+    padding: 0.625rem 2.5rem 0.625rem 2.5rem;
+    color: white;
+    font-weight: 400;
+}
+
+/* ------------------------------------------------------ */
+
+.form-container {
+    display: grid;
+    margin: 0.625rem 1.875rem 1.25rem 1.875rem;
+    padding: 1.46rem;
+    background-color: white;
+    border-radius: 0.7rem;
+}
+.input-fields{
+    display: flex;
+    flex-direction: column;
+}
+.input {
+    border: 1px solid var(--inputFieldsBorderColor);
+    border-radius: 0.5rem;
+    height: 2.625rem;
+    margin-bottom: 0.9375rem;
+    padding: 0.9375rem;
+}
+.input::placeholder {
+    color: var(--inputLettersColor);
+    font-weight: 600;
+}
+.input:focus {
+    outline: none;
+}
+.submit-button {
+    background-color: var(--createButtonColor);
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    width: 100%;
+    height: 3.125rem;
+    cursor: pointer;
+    font-weight: 700;
+}
+.footer {
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-align: center;
+    color: var(--footerLettersColor);
+    padding-top: 0.31rem;
+}
+.footer a {
+    text-decoration: none;
+    color: var(--footerLinksColor);
+}
