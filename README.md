@@ -20,7 +20,7 @@ This is a solution to the [Intro component with sign up form challenge on Fronte
 
 ### Links
 
-- Solution URL: [Solution Page]()
+- Solution URL: [Solution Page](https://www.frontendmentor.io/solutions/signup-form-validation-using-js-Gx4tmYyYih)
 - Live Site: [Live Site at Github Pages](https://s1s4.github.io/intro-component-with-signup-form/)
 
 ## My process
