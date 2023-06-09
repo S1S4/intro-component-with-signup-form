@@ -75,15 +75,17 @@ html {
     background-color: white;
     border-radius: 0.7rem;
 }
-.input-fields{
+.form-field {
     display: flex;
     flex-direction: column;
+    margin-bottom: 15px;
 }
 .input {
+    display: block;
     border: 1px solid var(--inputFieldsBorderColor);
     border-radius: 0.5rem;
     height: 42px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     padding: 15px;
 }
 .input::placeholder {
@@ -93,6 +95,20 @@ html {
 .input:focus {
     outline: none;
 }
+.form-field.error input {
+    border-color: var(--mainBgColor);
+}
+
+.form-field.success input {
+    border-color: var(--createButtonColor);
+}
+
+.form-field small {
+    display: flex;
+    justify-content: flex-end;
+    color: var(--mainBgColor);
+}
+
 .submit-button {
     background-color: var(--createButtonColor);
     border: none;
@@ -103,6 +119,9 @@ html {
     cursor: pointer;
     font-weight: 700;
 }
+
+/* ------------------------------------------------------ */
+
 .footer {
     font-size: 0.75rem;
     font-weight: 400;
@@ -116,6 +135,7 @@ html {
 }
 
 /* ------------------------------------------------------ */
+
 @media (min-width: 500px) and (max-width:699px) {
     .title {
         margin: 50px;
@@ -147,7 +167,6 @@ html {
     .title {
         grid-area: title;
         max-width: 570px;
-        align-self: left;
         justify-self: right;
         margin: 0;
     }
@@ -164,10 +183,12 @@ html {
         grid-area: sign;
         max-width: 500px;
         align-self: flex-end;
+        justify-self: left;
     }
     .form-container {
         grid-area: form;
         max-width: 500px;
+        justify-self: left;
     }
 }
 @media (min-width: 700px) and (max-width: 1024px) {
