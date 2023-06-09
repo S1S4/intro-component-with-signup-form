@@ -16,7 +16,7 @@ This is a solution to the [Intro component with sign up form challenge on Fronte
 
 ### Screenshot
 
-![](https://i.imgur.com/a/Ejb6RHx.png)
+![](https://i.imgur.com/wn8Yh1r.png)
 
 ### Links
 
