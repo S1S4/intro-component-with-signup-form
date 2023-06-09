@@ -82,6 +82,7 @@ const checkEmail = () => {
 
     if (!isRequired(em)) {
         showError(email, 'Email cannot be empty.');
+        email.placeholder = "email@example/com";
     } else if (!isEmailValid(em)) {
         showError(email, 'Looks like this is not an email.')
     } else {

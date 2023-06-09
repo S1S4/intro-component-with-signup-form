@@ -6,6 +6,8 @@
     --inputFieldsBorderColor: rgb(185, 182, 211, 0.4);
     --footerLettersColor: hsl(246, 25%, 77%);
     --footerLinksColor: hsl(0, 100%, 74%);
+    --errorColor: hsl(0, 100%, 74%);
+    --successColor: hsl(154, 59%, 51%);
 }
 * {
     box-sizing: border-box;
@@ -21,8 +23,9 @@ html {
     justify-items: center;
     width: 100%;
     min-height: 100vh;
-    padding-bottom: 20px;
     background: url(../images/bg-intro-mobile.png) no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
     background-color: var(--mainBgColor);
 
 }
@@ -54,6 +57,7 @@ html {
     margin-bottom: 18px;
     border-radius: 0.7rem;
     background-color: var(--freeTrialSignColor);
+    box-shadow: 0px 6px 0px 0px rgba(0,0,0,0.23);
 }
 .free-trial-sign p span {
     font-weight: 700;
@@ -74,6 +78,7 @@ html {
     padding: 1.46rem;
     background-color: white;
     border-radius: 0.7rem;
+    box-shadow: 0px 6px 0px 0px rgba(0,0,0,0.23);
 }
 .form-field {
     display: flex;
@@ -84,7 +89,7 @@ html {
     display: block;
     border: 1px solid var(--inputFieldsBorderColor);
     border-radius: 0.5rem;
-    height: 42px;
+    height: 50px;
     margin-bottom: 5px;
     padding: 15px;
 }
@@ -96,17 +101,27 @@ html {
     outline: none;
 }
 .form-field.error input {
-    border-color: var(--mainBgColor);
+    border-color: var(--errorColor);
+    background: url(../images/icon-error.svg) no-repeat;
+    background-position: 96% center;
+}
+.form-field.error #email::placeholder {
+    color: var(--errorColor);
+}
+.form-field.error .input::placeholder {
+    color: transparent;
 }
 
 .form-field.success input {
-    border-color: var(--createButtonColor);
+    border-color: var(--successColor);
 }
 
 .form-field small {
     display: flex;
     justify-content: flex-end;
-    color: var(--mainBgColor);
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--errorColor);
 }
 
 .submit-button {
@@ -118,6 +133,10 @@ html {
     height: 3.125rem;
     cursor: pointer;
     font-weight: 700;
+    box-shadow: inset -1px -4px 1px 0px rgba(0,0,0,0.23), inset 1px 1px 1px 0px rgba(0,0,0,0.23);
+}
+.submit-button:hover {
+    opacity: 0.7;
 }
 
 /* ------------------------------------------------------ */
@@ -135,6 +154,11 @@ html {
 }
 
 /* ------------------------------------------------------ */
+@media (max-width: 375px) {
+    .main-container {
+        padding-bottom: 25px;
+    }
+}
 
 @media (min-width: 500px) and (max-width:699px) {
     .title {
@@ -146,8 +170,11 @@ html {
 }
 @media (min-width: 420px) {
     .main-container {
-        background-image: url(../images/bg-intro-desktop.png) cover;
-        background-repeat:initial;
+        background: url(../images/bg-intro-desktop.png) no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-color: var(--mainBgColor);
+        overflow-x: hidden;
     }
 }
 
